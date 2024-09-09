@@ -1,0 +1,357 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner entrada = new Scanner(System.in);
+    
+    Integer x;
+    Integer y;
+    Integer divisão;
+    Integer resto;
+    
+    System.out.print("Digite o primeiro número: ");
+    x = entrada.nextInt();
+    System.out.print("Digite o segundo número: ");
+    y = entrada.nextInt();
+    
+    divisão = x/y;
+    resto = x%y;
+    System.out.print ("O resultado da divisão é: "+divisão+" E o resto é: "+resto);
+    
+  }
+}
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    
+   Scanner entrada = new Scanner(System.in);
+   
+    
+   Double dolar;
+   Double real= 4.95;
+   Double resultado;
+     
+   System.out.print("Digite o valor em dolar: ");
+   dolar = entrada.nextDouble();
+   resultado = dolar*real;
+   System.out.print("O valor em dolar é: "+resultado);
+    
+  }
+}
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+  
+     
+    Scanner entrada = new Scanner(System.in);
+   
+    
+    Double raio;
+    Double area;
+    Double Pi= 3.14;
+    
+    System.out.print("Digite o raio do seu circulo: ");
+    raio = entrada.nextDouble();
+    area = Pi*raio;
+    System.out.print("A area do circulo: "+area);
+   
+  }
+}
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+   
+    Scanner entrada = new Scanner(System.in);
+
+    System.out.print("qual o valor da hora de trabalho: R$ ");
+    double valorHora = entrada.nextDouble();
+
+    System.out.print("qual o número de horas trabalhadas no mês: ");
+    int horasTrabalhadas = entrada.nextInt();
+
+    System.out.print("qual o percentual de desconto do INSS (em %): ");
+    double descontoINSS = entrada.nextDouble();
+    double salarioBruto = valorHora * horasTrabalhadas;
+    double descontoINSSReal = salarioBruto * (descontoINSS / 100);
+    double salarioLiquido = salarioBruto - descontoINSSReal;
+    
+   System.out.println("\nSalário Bruto: R$ " + salarioBruto);
+    System.out.println("Desconto do INSS: R$ " + descontoINSSReal);
+    System.out.println("Salário Líquido: R$ " + salarioLiquido);
+     
+    }
+}
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite o valor de A: ");
+        int a = scanner.nextInt();
+        System.out.print("Digite o valor de B: ");
+        int b = scanner.nextInt();
+        int temp = a;
+        a = b;
+        b = temp;
+        System.out.println("Após a troca:");
+        System.out.println("A: " + a);
+        System.out.println("B: " + b);
+
+        }
+      }
+
+public class Main {
+    public static void main(String[] args) {
+      
+        System.out.println("Número | Quadrado | Cubo");
+        System.out.println("-------|----------|------");
+        for (int i = 0; i <= 10; i++) {
+            int quadrado = (int) Math.pow(i, 2);
+            int cubo = (int) Math.pow(i, 3);
+          System.out.printf("%-7d|%-10d|%-6d\n", i, quadrado, cubo);
+        
+        
+     }
+    }
+
+    import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+       
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a temperatura em Fahrenheit: ");
+        double fahrenheit = scanner.nextDouble();
+
+        double celsius = (fahrenheit - 32) * 5 / 9;
+
+        System.out.println("A temperatura em Celsius é: " + celsius);
+
+          }
+        }
+
+        import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite a hora (00:00): ");
+        String hora = scanner.nextLine();
+        
+        String[] partes = hora.split(":");
+        int horas = Integer.parseInt(partes[0]);
+        int minutos = Integer.parseInt(partes[1]);
+       
+        int minutosTotais = (horas * 60) + minutos;
+       
+        System.out.println("Minutos desde o início do dia: " + minutosTotais);
+
+        }
+      }
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite o valor da gasolina: R$ ");
+        double valorGasolina = scanner.nextDouble();
+        System.out.print("Digite o valor do etanol: R$ ");
+        double valorEtanol = scanner.nextDouble();
+        double relacao = valorEtanol / valorGasolina;
+        if (relacao < 0.7) {
+            System.out.println("Abasteça com etanol!");
+        } else {
+            System.out.println("Abasteça com gasolina!");
+
+            }
+          }
+      import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Qual a largura da área ( metros): ");
+        double larguraArea = scanner.nextDouble();
+        System.out.print("Qual o comprimento da área ( metros): ");
+        double comprimentoArea = scanner.nextDouble();
+
+        System.out.print("Qual largura da cerâmica ( centímetros): ");
+        double larguraCeramica = scanner.nextDouble();
+        System.out.print("Qual o comprimento da cerâmica ( centímetros): ");
+        double comprimentoCeramica = scanner.nextDouble();
+        larguraCeramica /= 100;
+        comprimentoCeramica /= 100;
+        double areaArea = larguraArea * comprimentoArea;
+        double areaCeramica = larguraCeramica * comprimentoCeramica;
+        double quantidadeCeramica = Math.ceil(areaArea / areaCeramica);
+       
+
+        quantidadeCeramica *= 1.1;
+
+        System.out.println("Será necessário : " + quantidadeCeramica + " peças");
+    }
+}
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o seu peso (em kg): ");
+        double peso = scanner.nextDouble();
+        double aguaRecomendadaMl = peso * 35;
+        double aguaRecomendadaLitros = aguaRecomendadaMl / 1000;
+        System.out.println("A quantidade de água indicada para você é: " + aguaRecomendadaLitros + " litros.");
+    }
+}
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+       
+             Scanner scanner = new Scanner(System.in);
+       
+        System.out.print("Digite a coordenada x do ponto P1: ");
+        double x1 = scanner.nextDouble();
+        System.out.print("Digite a coordenada y do ponto P1: ");
+        double y1 = scanner.nextDouble();
+        System.out.print("Digite a coordenada x do ponto P2: ");
+        double x2 = scanner.nextDouble();
+        System.out.print("Digite a coordenada y do ponto P2: ");
+        double y2 = scanner.nextDouble();
+        double distancia = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+       
+        System.out.println("A distância entre os pontos P1 e P2 é: " + distancia);
+    }
+}
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    
+   Scanner entrada = new Scanner(System.in);
+   
+   Double NotaA;
+   Double NotaB;
+   Double media;
+   
+   System.out.print("Digite a primeira nota: ");
+   NotaA = entrada.nextDouble();
+   System.out.print("Digite a segunda nota: ");
+   NotaB = entrada.nextDouble();
+  media = (NotaA+NotaB)/2;
+    
+   if (media >= 9){ 
+   System.out.print("A");
+   } else if (media >= 7.5){
+     System.out.println("B");
+     
+      } else if (media >= 6){
+     System.out.println("C");
+     
+      } else if (media >= 4){
+     System.out.println("D");
+   }else{
+     
+     System.out.println("E");
+    
+   }
+   
+    
+  }
+}
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+      
+       Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o número de votos brancos: ");
+        int votosBrancos = scanner.nextInt();
+        System.out.print("Digite o número de votos nulos: ");
+        int votosNulos = scanner.nextInt();
+        System.out.print("Digite o número de votos válidos: ");
+        int votosValidos = scanner.nextInt();
+        int totalVotos = votosBrancos + votosNulos + votosValidos;
+
+        double percentualBrancos = (double) votosBrancos / totalVotos * 100;
+        double percentualNulos = (double) votosNulos / totalVotos * 100;
+        double percentualValidos = (double) votosValidos / totalVotos * 100;
+
+        
+        System.out.println("Percentual de votos brancos: " + String.format("%.2f", percentualBrancos) + "%");
+        System.out.println("Percentual de votos nulos: " + String.format("%.2f", percentualNulos) + "%");
+        System.out.println("Percentual de votos válidos: " + String.format("%.2f", percentualValidos) + "%");
+    }
+}
+
+import java.util.Scanner;
+
+public class Main{
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("QUAL A IDADE DO ELEITOR: ");
+        int idade = scanner.nextInt();
+
+        if (idade < 16) {
+            System.out.println("NÃO ELEITOR");
+        } else if (idade >= 16 && idade < 18 || idade >= 70) {
+            System.out.println("ELEITOR FACULTATIVO");
+        } else {
+            System.out.println("ELEITOR OBRIGATÓRIO");
+        }
+    }
+}
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a descrição do produto: ");
+        String descricao = scanner.nextLine();
+        System.out.print("Digite a quantidade adquirida: ");
+        int quantidade = scanner.nextInt();
+        System.out.print("Digite o preço unitário: ");
+        double precoUnitario = scanner.nextDouble();
+
+        double total = quantidade * precoUnitario;
+
+        double desconto = 0;
+        if (quantidade <= 5) {
+            desconto = 0.02; // 2%
+        } else if (quantidade > 5 && quantidade <= 10) {
+            desconto = 0.03; // 3%
+        } else if (quantidade > 10 && quantidade < 30) {
+            desconto = 0.05; // 5%
+        } else if (quantidade >= 30) {
+            desconto = 0.1; // 10%
+        }
+        desconto *= total; // Aplica o desconto ao total
+
+        double totalAPagar = total - desconto;
+
+        System.out.println("Descrição do Produto: " + descricao);
+        System.out.println("Quantidade: " + quantidade);
+        System.out.println("Preço Unitário: R$ " + precoUnitario);
+        System.out.println("Total: R$ " + total);
+        System.out.println("Desconto: R$ " + desconto);
+        System.out.println("Total a Pagar: R$ " + totalAPagar);
+    }
+}
+
